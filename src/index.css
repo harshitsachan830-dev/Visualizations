@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #f5f5f5;
+  background: #000000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  --forest: #000000;
+  --teal: #34a853;
+  --gold: #fbbc05;
+  --ivory: #f5f5f5;
+  --blue: #4285f4;
+  --red: #ea4335;
+  --bg: #000000;
+  --surface: #0b0b0b;
+  --surface-raised: #141414;
+  --surface-soft: #1d1d1d;
+  --border: #303030;
+  --border-soft: #222222;
+  --text: #f5f5f5;
+  --muted: #bdbdbd;
+  --muted-dim: #888888;
+  --green: #34a853;
+  --amber: #fbbc05;
+  --pink: #ea4335;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  color: inherit;
+}
+button:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+::selection {
+  color: #000000;
+  background: var(--blue);
+}
+#root {
+  min-height: 100vh;
+}
