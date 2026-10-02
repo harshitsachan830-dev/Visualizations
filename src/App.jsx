@@ -43,6 +43,10 @@ import {
 } from "recharts";
 import "./App.css";
 
+const API_BASE_URL = import.meta.env.PROD
+  ? "https://lightgbm-api-z3g3.onrender.com"
+  : "";
+
 const DecisionSurface = lazy(() => import("./DecisionSurface.jsx"));
 const palette = [
   "#4285F4",
@@ -471,7 +475,7 @@ function App() {
     setTraining(true);
     setNotice("Training LightGBM with the local API...");
     try {
-      const response = await fetch("/api/train", {
+      const response = await fetch(`${API_BASE_URL}/api/train`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -515,7 +519,7 @@ function App() {
         : "Comparing LightGBM model presets...",
     );
     try {
-      const response = await fetch(`/api/${study}`, {
+      const response = await fetch(`${API_BASE_URL}/api/${study}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
